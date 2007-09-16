@@ -1,26 +1,25 @@
-%define product         CMFDynamicViewFTI
-%define ver             2.1
-%define rel             1
+%define Product CMFDynamicViewFTI
+%define product cmfDynamicviewfti
+%define name    zope-%{Product}
+%define version 3.0
+%define release %mkrel 1
 
-%define zope_minver     2.7
-
+%define zope_minver     2.10
 %define zope_home       %{_prefix}/lib/zope
 %define software_home   %{zope_home}/lib/python
 
-
-Summary:        Product for dynamic views in CMF 1.5
-Name:           zope-%{product}
-Version:        %{ver}
-Release:        %mkrel %{rel}
-License:        GPL
-Group:          System/Servers
-Source:         http://plone.org/products/cmfdynamicviewfti/releases/%{ver}/CMFDynamicViewFTI-%{ver}.tar.bz2
-URL:            http://plone.org/products/cmfdynamicviewfti
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:      noarch
-Requires:       zope >= %{zope_minver}
-Requires:       zope-CMF >= 1.5
-
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Summary:    Product for dynamic views in CMF 1.5
+License:    GPL
+Group:      System/Servers
+URL:        http://plone.org/products/%{product}
+Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
+Requires:    zope >= %{zope_minver}
+Requires:    zope-CMF >= 2.1
+BuildArch:   noarch
+BuildRoot:   %{_tmppath}/%{name}-%{version}
 
 %description
 CMFDynamicViewFTI is a product for dynamic views in CMF 1.5. The product
@@ -67,9 +66,5 @@ if [ -f "%{_prefix}/bin/zopectl" ] && [ "`%{_prefix}/bin/zopectl status`" != "da
 fi
 
 %files
-%defattr(-, root, root, 0755)
+%defattr(-,root,root)
 %{software_home}/Products/*
-
-
-
-
