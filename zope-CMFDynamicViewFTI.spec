@@ -1,7 +1,7 @@
 %define Product CMFDynamicViewFTI
-%define product cmfDynamicviewfti
+%define product cmfdynamicviewfti
 %define name    zope-%{Product}
-%define version 3.0
+%define version 3.0.1
 %define release %mkrel 1
 
 %define zope_minver     2.10
