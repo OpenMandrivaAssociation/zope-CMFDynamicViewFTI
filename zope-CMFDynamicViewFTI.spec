@@ -19,6 +19,7 @@ Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-
 Requires:    zope >= %{zope_minver}
 Requires:    zope-CMF >= 2.1
 BuildArch:   noarch
+BuildRoot:   %{_tmppath}/%{name}-%{version}
 
 %description
 CMFDynamicViewFTI is a product for dynamic views in CMF 1.5. The product
