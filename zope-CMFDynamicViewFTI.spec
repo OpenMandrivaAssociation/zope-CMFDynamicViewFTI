@@ -2,7 +2,7 @@
 %define product cmfdynamicviewfti
 %define name    zope-%{Product}
 %define version 3.0.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 %define zope_minver     2.10
 %define zope_home       %{_prefix}/lib/zope
