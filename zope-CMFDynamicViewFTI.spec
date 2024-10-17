@@ -14,7 +14,7 @@ Release:	%{release}
 Summary:    Product for dynamic views in CMF 1.5
 License:    GPL
 Group:      System/Servers
-URL:        http://plone.org/products/%{product}
+URL:        https://plone.org/products/%{product}
 Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:    zope >= %{zope_minver}
 Requires:    zope-CMF >= 2.1
